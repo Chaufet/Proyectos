@@ -1,6 +1,6 @@
 ¡Hola! Mi nombre es Kevin Leonardo Romero Herrera, Encantado de conocerte
 
-# Portfolio de Proyectos
+# Portafolio de Proyectos
 
 Este repositorio contiene mis proyectos personales y trabajos de programación. Cada proyecto incluye su código fuente.
 
