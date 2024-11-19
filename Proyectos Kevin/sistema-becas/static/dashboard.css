@@ -1,0 +1,58 @@
+/* Asegura que el cuerpo y el html ocupen toda la altura de la ventana */
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #e9ecef; /* Color de fondo sólido */
+}
+
+/* Estilos para el contenedor principal del dashboard */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(248, 249, 250, 0.8); /* Fondo de la sección central con opacidad */
+    padding: 2rem;
+}
+
+/* Estilo para los enlaces del dashboard */
+main a {
+    display: block;
+    font-size: 1.25rem;
+    color: #007bff;
+    text-decoration: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0.5rem 0;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+main a:hover {
+    background-color: #e9ecef;
+    color: #0056b3;
+}
+
+main a:active {
+    background-color: #dee2e6;
+}
+
+/* Estilo para el mensaje de bienvenida */
+main br {
+    margin-bottom: 1.5rem;
+}
+
+main h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}

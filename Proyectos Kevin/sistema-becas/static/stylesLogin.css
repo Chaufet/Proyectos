@@ -1,0 +1,103 @@
+/* Asegura que el cuerpo y el html ocupen toda la altura de la ventana */
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #e9ecef; /* Color de fondo sólido */
+}
+
+/* Estilos para el contenedor principal que incluye el encabezado y el formulario */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(248, 249, 250, 0.8); /* Fondo de la sección central con opacidad */
+    padding: 2rem;
+}
+
+/* Contenedor que enmarca el encabezado y la tarjeta de inicio de sesión */
+.wrapper {
+    border: 1px solid #dee2e6; /* Borde alrededor del contenido */
+    border-radius: 1rem; /* Bordes redondeados */
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    padding: 2rem;
+    background-color: #ffffff; /* Fondo blanco para el contenedor */
+    width: 100%;
+    max-width: 500px; /* Ajusta el ancho máximo según sea necesario */
+}
+
+/* Estilo para el encabezado */
+header {
+    display: flex; /* Utiliza flexbox para la alineación */
+    align-items: center; /* Alinea los elementos verticalmente */
+    margin-bottom: 1.5rem;
+}
+
+header i {
+    font-size: 2rem;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+
+/* Estilo para la tarjeta de inicio de sesión */
+.card {
+    border-radius: 1rem;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* Estilo para el botón de login */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    font-size: 1.125rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary:focus, .btn-primary:active {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Estilo para la barra de entrada */
+.form-control {
+    border-radius: 0.5rem;
+    border: 2px solid #ced4da;
+    padding: 0.75rem 1.25rem;
+    font-size: 1.5rem;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.form-control::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}

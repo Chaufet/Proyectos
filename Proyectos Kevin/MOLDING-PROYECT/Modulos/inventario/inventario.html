@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <title> contratistas</title>
+
+
+  <!-- cdn datatables-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css"/>
+
+</head>
+<body>
+  <!-- nav de  contratistas-->
+  <nav class="navbar bg-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand text-success" href="#">Molding</a>
+      <h2 class="navbar-brand text-success">Administración de Inventario</h2>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Molding</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/dashboard/inventary/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- dif crud modulo inventario-->
+  <div>
+    <div class="row">
+
+
+      <div class="col-sm-6" id="row1">
+
+        <!--botones crud-->
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal_consultar "
+          data-bs-whatever="@8"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-search" viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg>consultar</button>
+      </div>
+      <div class="col-sm-6" id="row1">
+        <!--botones crud-->
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal_registrar "
+          data-bs-whatever="@8"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-archive" viewBox="0 0 16 16">
+            <path
+              d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+          </svg>Registrar</button>
+
+      </div>
+
+    </div>
+    <!--model label consultar-->
+    <div class="modal fade" id="exampleModal_consultar" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Consultar contratos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--input registrar-->
+    <div class="modal fade" id="exampleModal_registrar" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Registrar contratos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+
+              <div class="input-group mb-3">
+                <label class="input-group-text" for="inputGroupFile01">Upload</label>
+                <input type="file" class="form-control" id="inputGroupFile01">
+              </div>
+
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-6 " id="row1">
+        <!--botones crud-->
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal_eliminar"
+          data-bs-whatever="@8"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-trash3" viewBox="0 0 16 16">
+            <path
+              d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+          </svg>Eliminar</button>
+
+      </div>
+      <div class="col-sm-6" id="row1">
+        <!--botones crud-->
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal_actualizar"
+          data-bs-whatever="@8"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-send" viewBox="0 0 16 16">
+            <path
+              d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+          </svg>Actualizar</button>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+  <!--input eliminar-->
+  <div class="modal fade" id="exampleModal_eliminar" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Consultar contratos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Recipient:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--input  de actualizar-->
+  <div class="modal fade" id="exampleModal_actualizar" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Consultar contratos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Recipient:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="inputGroupFile01">Upload</label>
+              <input type="file" class="form-control" id="inputGroupFile01">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <main>
+    <!--============================ input  de informacion inventario ========== ======-->
+
+
+
+    <div class="container">
+      <table id="example" class="table table-striped" style="width:100%">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Age</th>
+            <th>Start date</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tiger Nixon</td>
+            <td>System Architect</td>
+            <td>Edinburgh</td>
+            <td>61</td>
+            <td>2011-04-25</td>
+            <td>$320,800</td>
+          </tr>
+          <tr>
+            <td>Garrett Winters</td>
+            <td>Accountant</td>
+            <td>Tokyo</td>
+            <td>63</td>
+            <td>2011-07-25</td>
+            <td>$170,750</td>
+          </tr>
+          <tr>
+            <td>Ashton Cox</td>
+            <td>Junior Technical Author</td>
+            <td>San Francisco</td>
+            <td>66</td>
+            <td>2009-01-12</td>
+            <td>$86,000</td>
+          </tr>
+          <tr>
+            <td>Cedric Kelly</td>
+            <td>Senior Javascript Developer</td>
+            <td>Edinburgh</td>
+            <td>22</td>
+            <td>2012-03-29</td>
+            <td>$433,060</td>
+          </tr>
+          <tr>
+            <td>Airi Satou</td>
+            <td>Accountant</td>
+            <td>Tokyo</td>
+            <td>33</td>
+            <td>2008-11-28</td>
+            <td>$162,700</td>
+          </tr>
+          <tr>
+            <td>Brielle Williamson</td>
+            <td>Integration Specialist</td>
+            <td>New York</td>
+            <td>61</td>
+            <td>2012-12-02</td>
+            <td>$372,000</td>
+          </tr>
+          <tr>
+            <td>Herrod Chandler</td>
+            <td>Sales Assistant</td>
+            <td>San Francisco</td>
+            <td>59</td>
+            <td>2012-08-06</td>
+            <td>$137,500</td>
+          </tr>
+          <tr>
+            <td>Rhona Davidson</td>
+            <td>Integration Specialist</td>
+            <td>Tokyo</td>
+            <td>55</td>
+            <td>2010-10-14</td>
+            <td>$327,900</td>
+          </tr>
+          <tr>
+            <td>Colleen Hurst</td>
+            <td>Javascript Developer</td>
+            <td>San Francisco</td>
+            <td>39</td>
+            <td>2009-09-15</td>
+            <td>$205,500</td>
+          </tr>
+          <tr>
+            <td>Sonya Frost</td>
+            <td>Software Engineer</td>
+            <td>Edinburgh</td>
+            <td>23</td>
+            <td>2008-12-13</td>
+            <td>$103,600</td>
+          </tr>
+          <tr>
+            <td>Jena Gaines</td>
+            <td>Office Manager</td>
+            <td>London</td>
+            <td>30</td>
+            <td>2008-12-19</td>
+            <td>$90,560</td>
+          </tr>
+          <tr>
+            <td>Quinn Flynn</td>
+            <td>Support Lead</td>
+            <td>Edinburgh</td>
+            <td>22</td>
+            <td>2013-03-03</td>
+            <td>$342,000</td>
+          </tr>
+          <tr>
+            <td>Charde Marshall</td>
+            <td>Regional Director</td>
+            <td>San Francisco</td>
+            <td>36</td>
+            <td>2008-10-16</td>
+            <td>$470,600</td>
+          </tr>
+          <tr>
+            <td>Haley Kennedy</td>
+            <td>Senior Marketing Designer</td>
+            <td>London</td>
+            <td>43</td>
+            <td>2012-12-18</td>
+            <td>$313,500</td>
+          </tr>
+          <tr>
+            <td>Tatyana Fitzpatrick</td>
+            <td>Regional Director</td>
+            <td>London</td>
+            <td>19</td>
+            <td>2010-03-17</td>
+            <td>$385,750</td>
+          </tr>
+          <tr>
+            <td>Michael Silva</td>
+            <td>Marketing Designer</td>
+            <td>London</td>
+            <td>66</td>
+            <td>2012-11-27</td>
+            <td>$198,500</td>
+          </tr>
+          <tr>
+            <td>Paul Byrd</td>
+            <td>Chief Financial Officer (CFO)</td>
+            <td>New York</td>
+            <td>64</td>
+            <td>2010-06-09</td>
+            <td>$725,000</td>
+          </tr>
+          <tr>
+            <td>Gloria Little</td>
+            <td>Systems Administrator</td>
+            <td>New York</td>
+            <td>59</td>
+            <td>2009-04-10</td>
+            <td>$237,500</td>
+          </tr>
+          <tr>
+            <td>Bradley Greer</td>
+            <td>Software Engineer</td>
+            <td>London</td>
+            <td>41</td>
+            <td>2012-10-13</td>
+            <td>$132,000</td>
+          </tr>
+          <tr>
+            <td>Dai Rios</td>
+            <td>Personnel Lead</td>
+            <td>Edinburgh</td>
+            <td>35</td>
+            <td>2012-09-26</td>
+            <td>$217,500</td>
+          </tr>
+          <tr>
+            <td>Jenette Caldwell</td>
+            <td>Development Lead</td>
+            <td>New York</td>
+            <td>30</td>
+            <td>2011-09-03</td>
+            <td>$345,000</td>
+          </tr>
+          <tr>
+            <td>Yuri Berry</td>
+            <td>Chief Marketing Officer (CMO)</td>
+            <td>New York</td>
+            <td>40</td>
+            <td>2009-06-25</td>
+            <td>$675,000</td>
+          </tr>
+          <tr>
+            <td>Caesar Vance</td>
+            <td>Pre-Sales Support</td>
+            <td>New York</td>
+            <td>21</td>
+            <td>2011-12-12</td>
+            <td>$106,450</td>
+          </tr>
+          <tr>
+            <td>Doris Wilder</td>
+            <td>Sales Assistant</td>
+            <td>Sydney</td>
+            <td>23</td>
+            <td>2010-09-20</td>
+            <td>$85,600</td>
+          </tr>
+          <tr>
+            <td>Angelica Ramos</td>
+            <td>Chief Executive Officer (CEO)</td>
+            <td>London</td>
+            <td>47</td>
+            <td>2009-10-09</td>
+            <td>$1,200,000</td>
+          </tr>
+          <tr>
+            <td>Gavin Joyce</td>
+            <td>Developer</td>
+            <td>Edinburgh</td>
+            <td>42</td>
+            <td>2010-12-22</td>
+            <td>$92,575</td>
+          </tr>
+          <tr>
+            <td>Jennifer Chang</td>
+            <td>Regional Director</td>
+            <td>Singapore</td>
+            <td>28</td>
+            <td>2010-11-14</td>
+            <td>$357,650</td>
+          </tr>
+          <tr>
+            <td>Brenden Wagner</td>
+            <td>Software Engineer</td>
+            <td>San Francisco</td>
+            <td>28</td>
+            <td>2011-06-07</td>
+            <td>$206,850</td>
+          </tr>
+          <tr>
+            <td>Fiona Green</td>
+            <td>Chief Operating Officer (COO)</td>
+            <td>San Francisco</td>
+            <td>48</td>
+            <td>2010-03-11</td>
+            <td>$850,000</td>
+          </tr>
+          <tr>
+            <td>Shou Itou</td>
+            <td>Regional Marketing</td>
+            <td>Tokyo</td>
+            <td>20</td>
+            <td>2011-08-14</td>
+            <td>$163,000</td>
+          </tr>
+          <tr>
+            <td>Michelle House</td>
+            <td>Integration Specialist</td>
+            <td>Sydney</td>
+            <td>37</td>
+            <td>2011-06-02</td>
+            <td>$95,400</td>
+          </tr>
+          <tr>
+            <td>Suki Burks</td>
+            <td>Developer</td>
+            <td>London</td>
+            <td>53</td>
+            <td>2009-10-22</td>
+            <td>$114,500</td>
+          </tr>
+          <tr>
+            <td>Prescott Bartlett</td>
+            <td>Technical Author</td>
+            <td>London</td>
+            <td>27</td>
+            <td>2011-05-07</td>
+            <td>$145,000</td>
+          </tr>
+          <tr>
+            <td>Gavin Cortez</td>
+            <td>Team Leader</td>
+            <td>San Francisco</td>
+            <td>22</td>
+            <td>2008-10-26</td>
+            <td>$235,500</td>
+          </tr>
+          <tr>
+            <td>Martena Mccray</td>
+            <td>Post-Sales support</td>
+            <td>Edinburgh</td>
+            <td>46</td>
+            <td>2011-03-09</td>
+            <td>$324,050</td>
+          </tr>
+          <tr>
+            <td>Unity Butler</td>
+            <td>Marketing Designer</td>
+            <td>San Francisco</td>
+            <td>47</td>
+            <td>2009-12-09</td>
+            <td>$85,675</td>
+          </tr>
+          <tr>
+            <td>Howard Hatfield</td>
+            <td>Office Manager</td>
+            <td>San Francisco</td>
+            <td>51</td>
+            <td>2008-12-16</td>
+            <td>$164,500</td>
+          </tr>
+          <tr>
+            <td>Hope Fuentes</td>
+            <td>Secretary</td>
+            <td>San Francisco</td>
+            <td>41</td>
+            <td>2010-02-12</td>
+            <td>$109,850</td>
+          </tr>
+          <tr>
+            <td>Vivian Harrell</td>
+            <td>Financial Controller</td>
+            <td>San Francisco</td>
+            <td>62</td>
+            <td>2009-02-14</td>
+            <td>$452,500</td>
+          </tr>
+          <tr>
+            <td>Timothy Mooney</td>
+            <td>Office Manager</td>
+            <td>London</td>
+            <td>37</td>
+            <td>2008-12-11</td>
+            <td>$136,200</td>
+          </tr>
+          <tr>
+            <td>Jackson Bradshaw</td>
+            <td>Director</td>
+            <td>New York</td>
+            <td>65</td>
+            <td>2008-09-26</td>
+            <td>$645,750</td>
+          </tr>
+          <tr>
+            <td>Olivia Liang</td>
+            <td>Support Engineer</td>
+            <td>Singapore</td>
+            <td>64</td>
+            <td>2011-02-03</td>
+            <td>$234,500</td>
+          </tr>
+          <tr>
+            <td>Bruno Nash</td>
+            <td>Software Engineer</td>
+            <td>London</td>
+            <td>38</td>
+            <td>2011-05-03</td>
+            <td>$163,500</td>
+          </tr>
+          <tr>
+            <td>Sakura Yamamoto</td>
+            <td>Support Engineer</td>
+            <td>Tokyo</td>
+            <td>37</td>
+            <td>2009-08-19</td>
+            <td>$139,575</td>
+          </tr>
+          <tr>
+            <td>Thor Walton</td>
+            <td>Developer</td>
+            <td>New York</td>
+            <td>61</td>
+            <td>2013-08-11</td>
+            <td>$98,540</td>
+          </tr>
+          <tr>
+            <td>Finn Camacho</td>
+            <td>Support Engineer</td>
+            <td>San Francisco</td>
+            <td>47</td>
+            <td>2009-07-07</td>
+            <td>$87,500</td>
+          </tr>
+          <tr>
+            <td>Serge Baldwin</td>
+            <td>Data Coordinator</td>
+            <td>Singapore</td>
+            <td>64</td>
+            <td>2012-04-09</td>
+            <td>$138,575</td>
+          </tr>
+          <tr>
+            <td>Zenaida Frank</td>
+            <td>Software Engineer</td>
+            <td>New York</td>
+            <td>63</td>
+            <td>2010-01-04</td>
+            <td>$125,250</td>
+          </tr>
+          <tr>
+            <td>Zorita Serrano</td>
+            <td>Software Engineer</td>
+            <td>San Francisco</td>
+            <td>56</td>
+            <td>2012-06-01</td>
+            <td>$115,000</td>
+          </tr>
+          <tr>
+            <td>Jennifer Acosta</td>
+            <td>Junior Javascript Developer</td>
+            <td>Edinburgh</td>
+            <td>43</td>
+            <td>2013-02-01</td>
+            <td>$75,650</td>
+          </tr>
+          <tr>
+            <td>Cara Stevens</td>
+            <td>Sales Assistant</td>
+            <td>New York</td>
+            <td>46</td>
+            <td>2011-12-06</td>
+            <td>$145,600</td>
+          </tr>
+          <tr>
+            <td>Hermione Butler</td>
+            <td>Regional Director</td>
+            <td>London</td>
+            <td>47</td>
+            <td>2011-03-21</td>
+            <td>$356,250</td>
+          </tr>
+          <tr>
+            <td>Lael Greer</td>
+            <td>Systems Administrator</td>
+            <td>London</td>
+            <td>21</td>
+            <td>2009-02-27</td>
+            <td>$103,500</td>
+          </tr>
+          <tr>
+            <td>Jonas Alexander</td>
+            <td>Developer</td>
+            <td>San Francisco</td>
+            <td>30</td>
+            <td>2010-07-14</td>
+            <td>$86,500</td>
+          </tr>
+          <tr>
+            <td>Shad Decker</td>
+            <td>Regional Director</td>
+            <td>Edinburgh</td>
+            <td>51</td>
+            <td>2008-11-13</td>
+            <td>$183,000</td>
+          </tr>
+          <tr>
+            <td>Michael Bruce</td>
+            <td>Javascript Developer</td>
+            <td>Singapore</td>
+            <td>29</td>
+            <td>2011-06-27</td>
+            <td>$183,000</td>
+          </tr>
+          <tr>
+            <td>Donna Snider</td>
+            <td>Customer Support</td>
+            <td>New York</td>
+            <td>27</td>
+            <td>2011-01-25</td>
+            <td>$112,000</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Age</th>
+            <th>Start date</th>
+            <th>Salary</th>
+          </tr>
+        </tfoot>
+      </table>
+
+    </div>
+
+
+
+  </main>
+  <footer class="w-100  d-flex  align-items-center justify-content-center flex-wrap">
+    <p class="fs-5 px-3  pt-3">DevOp. &copy; Todos Los Derechos Reservados 2022</p>
+    <div id="iconos">
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-twitter"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+    </div>
+  </footer>
+
+
+
+
+</script>
+
+
+  <!--cdn datatables script-->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+
+
+   
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.colVis.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
+
+
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script type="text/javascript" src="/SUSTENTACION%20MOLDING/contratistas/js/formsContratistas.js"></script>
+  <script src="/SUSTENTACION%20MOLDING/contratistas/js/main.js"></script>
+  
+</body>
+
+</html>

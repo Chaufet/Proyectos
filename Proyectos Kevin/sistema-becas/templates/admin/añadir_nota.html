@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='añadirNota.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/añadir.png') }}" type="image/x-icon">
+    <title>añadir nota</title>
+</head>
+<body>
+    <main>
+        <form action="" method="post">
+            <!-- Campo de nombre -->
+            <p>
+                <label for="name">{{form.name.label}}</label>
+                {{form.name(class="form-input", id="name")}}
+            </p>
+
+            <!-- Campo de créditos -->
+            <p>
+                <label for="creditos">{{form.creditos.label}}</label>
+                {{form.creditos(class="form-input", id="creditos")}}
+            </p>
+
+            <!-- Campo de nota -->
+            <p>
+                <label for="nota">{{form.nota.label}}</label>
+                {{form.nota(class="form-input", id="nota")}}
+            </p>
+
+            <!-- Botón de envío -->
+            <p>
+                {{form.submit(class="submit-btn")}}
+            </p>
+        </form>
+
+        <!-- Enlace de navegación -->
+        <a href="/admin">Volver</a>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

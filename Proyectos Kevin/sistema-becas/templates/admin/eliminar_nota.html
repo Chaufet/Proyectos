@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='eliminarEstudiantes.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/eliminar.png') }}" type="image/x-icon">
+    <title>Eliminar Estudiante</title>
+</head>
+<body>
+    <main>
+        <form action="" method="post">
+            <!-- Campo de nombre de usuario -->
+            <p>
+                <label for="username">{{form.username.label}}</label>
+                {{form.username(class="form-input", id="username", size=30)}}
+            </p>
+
+            <!-- Campo de nombre -->
+            <p>
+                <label for="name">{{form.name.label}}</label>
+                {{form.name(class="form-input", id="name", size=30)}}
+            </p>
+
+            <!-- Checkbox de confirmación -->
+            <div class="checkbox-label">
+                <input type="checkbox" id="check" name="check" value="agree">
+                <label for="check">Está seguro que desea eliminar esta nota? Esta acción es irreversible</label>
+            </div>
+
+            <!-- Botón de envío -->
+            <p>
+                {{form.submit(class="submit-btn")}}
+            </p>
+        </form>
+
+        <!-- Enlace de navegación -->
+        <a href="/admin">Volver</a>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+/* Asegura que el cuerpo y el html ocupen toda la altura de la ventana */
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #e9ecef; /* Color de fondo sólido */
+}
+
+/* Estilos para el contenedor principal */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(248, 249, 250, 0.8); /* Fondo con opacidad */
+    padding: 2rem;
+}
+
+/* Estilo para los encabezados principales */
+h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #495057;
+}
+
+/* Estilo para la tabla */
+.student-table {
+    width: 100%;
+    max-width: 600px; /* Ajusta el ancho máximo */
+    border-collapse: collapse; /* Colapsa los bordes */
+    background-color: #ffffff; /* Fondo blanco */
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los encabezados de la tabla */
+.student-table th, .student-table td {
+    padding: 1rem;
+    border: 1px solid #dee2e6; /* Bordes suaves */
+    text-align: left; /* Alineación de texto */
+}
+
+/* Estilo para las cabeceras de la tabla */
+.student-table th {
+    background-color: #f8f9fa; /* Fondo de cabecera */
+    color: #495057;
+    font-weight: bold;
+}
+
+/* Estilo para las filas alternadas */
+.student-table tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+/* Estilo para el enlace de navegación */
+a {
+    display: block;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #007bff;
+    text-decoration: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 300px;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+a:hover {
+    background-color: #e9ecef;
+    color: #0056b3;
+}
+
+a:active {
+    background-color: #dee2e6;
+}

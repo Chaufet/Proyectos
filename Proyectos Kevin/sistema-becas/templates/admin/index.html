@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/administrador.png') }}" type="image/x-icon">
+    <title>Dashboard</title>
+</head>
+<body>
+    <main id="main">
+        Bienvenido administrador, elige la operación que deseas realizar <br><br>
+
+        <a href="/añadir_estudiante">Añadir Estudiante</a> <br>
+        <a href="/lista_estudiantes">Ver Lista de Estudiantes</a> <br>
+        <a href="/eliminar_estudiante">Eliminar Estudiante</a> <br>
+
+        <a href="/añadir_nota">Añadir Nota</a> <br>
+        <a href="/eliminar_nota">Eliminar Nota</a> <br>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* Asegura que el cuerpo y el html ocupen toda la altura de la ventana */
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #e9ecef; /* Color de fondo sólido */
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para el contenedor principal */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(248, 249, 250, 0.8); /* Fondo con opacidad */
+    padding: 2rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* Estilo para los campos del formulario */
+form p {
+    margin: 1rem 0;
+}
+
+form label {
+    font-size: 1rem;
+    color: #495057;
+}
+
+form input[type="text"], form input[type="password"] {
+    padding: 0.5rem;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 0.5rem;
+}
+
+/* Estilo para el checkbox y su etiqueta */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+label[for="check"] {
+    color: #495057;
+    font-size: 1rem;
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+/* Estilo para el botón de submit */
+form input[type="submit"], form button {
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+form input[type="submit"]:hover, form button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el enlace de navegación */
+a {
+    display: block;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #007bff;
+    text-decoration: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 300px;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+a:hover {
+    background-color: #e9ecef;
+    color: #0056b3;
+}
+
+a:active {
+    background-color: #dee2e6;
+}

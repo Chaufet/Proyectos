@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+body{
+    font-family:sans-serif;
+    overflow-x: hidden;
+}
+
+#menu a {
+    font-size: 23px;
+    
+    color: #3f3f3f;
+}
+
+#menu button {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*imagenes*/
+
+.carousel-inner{
+    max-height: 30rem;
+}
+
+
+.mapa{
+    background: url(../IMAGENES/mapa2.jpeg);
+    width: 100%;
+    height: 600px;
+}
+
+#local{
+    background: #afaeae;
+    padding-bottom: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper{
+    width: 50%;
+    margin-left: 100px;
+    padding-top: 150px;
+}
+
+
+#numeros-local div{
+    padding: 0 20px 0 0;
+    height: 48px;
+    
+}
+
+#numeros-local div:not(:last-child){
+    border-right: 2px solid #e4dede;
+    
+}
+
+#numeros-local div:not(:first-child){
+    padding-left:20px;
+}
+
+#numeros-local p {
+    margin: 0;
+
+} 
+
+
+
+.wrapper{
+    width: 90%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+
+#bg-contacto{
+    position: relative;
+    top: -130px;
+}
+
+#seccion-contacto{
+    background-color: #0fb353;
+    min-height: 500px;
+    position: relative;
+}
+
+
+#contenedor-formulario{
+    position:absolute;
+    top: 30;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fbfafa;
+    border-radius: 5px;
+    max-width: 500px;
+}
+
+
+#titulo-formulario{
+    color: #3f3f3f;
+}
+
+footer{
+    background: #119723c9;
+    min-height: 100px;
+
+}
+
+
+footer p{
+    color:#e7dfdf;
+    text-align: center;
+
+}
+
+#iconos i{
+    font-size: 26px;
+    padding: 0 8px;
+    color: #e7e2e2;
+}
+
+
+
+
+#carouselExampleControls{
+    display: block;
+    margin: auto;
+    width: 750px;
+    height: 500px;
+    
+}
+ #servicios_1{
+    border-radius: 45px;
+ }
+
+ #content{
+    display: block;
+    margin: auto;
+ }
+
+
+ #ubicacion{
+    padding: 45px;
+ }
+
+
+
+ #formulario{
+    display: block;
+    margin: auto;
+}
+
+@media (max-width:768){
+    #intro, #equipo {
+        width: 90%  !important;
+    }
+}
+
+
+
+.servico-fila{
+    width: 100% !important;
+    text-align: center;
+}
+
+@media(max-width:576px){
+  .icono-warp{
+      flex-wrap: wrap;
+      justify-content: center !important;
+  }  
+}
+
+@media (max-width:1200px){
+#local{
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+}
+#bg-contacto{
+    top: -110px;
+}
+

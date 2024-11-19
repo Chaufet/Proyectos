@@ -1,0 +1,100 @@
+/* Asegura que el cuerpo y el html ocupen toda la altura de la ventana */
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #e9ecef; /* Color de fondo sólido */
+}
+
+/* Estilos para el contenedor del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(248, 249, 250, 0.8); /* Fondo del formulario con opacidad */
+    padding: 2rem;
+}
+
+/* Estilo para los elementos del formulario */
+form p {
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Estilo para las etiquetas del formulario */
+form p label {
+    display: block;
+    font-size: 1.25rem;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo para los campos de entrada del formulario */
+form input[type="text"], 
+form input[type="password"] {
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 2px solid #ced4da;
+    padding: 0.75rem 1.25rem;
+    font-size: 1.25rem;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+form input[type="text"]:focus, 
+form input[type="password"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+/* Estilo para el botón de envío del formulario */
+form input[type="submit"] {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    font-size: 1.125rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+form input[type="submit"]:focus, 
+form input[type="submit"]:active {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Estilo para el enlace de navegación */
+a {
+    display: block;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #007bff;
+    text-decoration: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+a:hover {
+    background-color: #e9ecef;
+    color: #0056b3;
+}
+
+a:active {
+    background-color: #dee2e6;
+}

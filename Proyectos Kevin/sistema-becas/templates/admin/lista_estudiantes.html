@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='listaEstudiantes.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/lista.png') }}" type="image/x-icon">
+    <title>Lista de Estudiantes</title>
+</head>
+<body>
+    <main id="main">
+        <h1>Esta es tu lista de estudiantes:</h1>
+
+        {% if users %}
+            <table class="student-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Notas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                        <tr>
+                            <td>{{ user["name"] }}</td>
+                            <td>{{ user["notas"] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No hay estudiantes disponibles.</p>
+        {% endif %}
+
+        <a href="/admin">Volver</a>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

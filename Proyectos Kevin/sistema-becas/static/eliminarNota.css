@@ -1,0 +1,106 @@
+/* Asegura que el cuerpo y el html ocupen toda la altura de la ventana */
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #e9ecef; /* Color de fondo sólido */
+}
+
+/* Estilos para el contenedor principal */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(248, 249, 250, 0.9); /* Fondo con opacidad */
+    padding: 2rem;
+}
+
+/* Estilo para los campos del formulario */
+form {
+    width: 100%;
+    max-width: 400px; /* Limita el ancho máximo del formulario */
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+form p {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-weight: 600;
+    color: #495057;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Estilo para el checkbox */
+.checkbox-label {
+    font-weight: 500;
+    color: #495057;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label input {
+    margin-right: 0.5rem;
+}
+
+/* Estilo para el botón de envío */
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el enlace "Volver" */
+a {
+    display: block;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #007bff;
+    text-decoration: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 300px;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+a:hover {
+    background-color: #e9ecef;
+    color: #0056b3;
+}
