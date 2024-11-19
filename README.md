@@ -26,6 +26,11 @@ Este repositorio contiene mis proyectos personales y trabajos de programación. 
   Este proyecto es una actividad basica para mi universidad en el cual se puede llevar un sistema de gestión de notas en el 
   cual se puede verificar si algun estudiante es apto o no para una beca.
 
+-Molding Proyect
+  Este es mi proyecto final realizado para aprobar mi tecnólogo en Analisis y desarrollo de Sistemas de Información, el cual
+  se crea con el fin de ayudar a una empresa constructora a mejorar, agilizar y facilitar su distribución de productos, inventarios
+  y manejo de trabajo con los contratistas.
+
 ## Acerca de mí👀
 Soy una persona apasionada por mi profesión, con una excelente capacidad de organización y facilidad para trabajar en equipo. Me considero altamente adaptable a diferentes entornos y siempre enfocado en alcanzar objetivos. Además, poseo conocimientos en diversos lenguajes de programación como Java, Python, JavaScript, entre otros. Tengo un gran interés en el desarrollo de software y el análisis de sistemas.
 
