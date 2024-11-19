@@ -1,0 +1,56 @@
+/home/harold/Documentos/Repositorios/Actividad8/obj/Debug/net8.0/Actividad8.GeneratedMSBuildEditorConfig.editorconfig
+/home/harold/Documentos/Repositorios/Actividad8/obj/Debug/net8.0/Actividad8.AssemblyInfoInputs.cache
+/home/harold/Documentos/Repositorios/Actividad8/obj/Debug/net8.0/Actividad8.AssemblyInfo.cs
+/home/harold/Documentos/Repositorios/Actividad8/obj/Debug/net8.0/Actividad8.csproj.CoreCompileInputs.cache
+/home/harold/Documentos/Repositorios/Actividad8/bin/Debug/net8.0/Actividad8
+/home/harold/Documentos/Repositorios/Actividad8/bin/Debug/net8.0/Actividad8.deps.json
+/home/harold/Documentos/Repositorios/Actividad8/bin/Debug/net8.0/Actividad8.runtimeconfig.json
+/home/harold/Documentos/Repositorios/Actividad8/bin/Debug/net8.0/Actividad8.dll
+/home/harold/Documentos/Repositorios/Actividad8/bin/Debug/net8.0/Actividad8.pdb
+/home/harold/Documentos/Repositorios/Actividad8/obj/Debug/net8.0/Actividad8.dll
+/home/harold/Documentos/Repositorios/Actividad8/obj/Debug/net8.0/refint/Actividad8.dll
+/home/harold/Documentos/Repositorios/Actividad8/obj/Debug/net8.0/Actividad8.pdb
+/home/harold/Documentos/Repositorios/Actividad8/obj/Debug/net8.0/Actividad8.genruntimeconfig.cache
+/home/harold/Documentos/Repositorios/Actividad8/obj/Debug/net8.0/ref/Actividad8.dll
+C:\Users\kevv_\Downloads\Actividad8\bin\Debug\net8.0\Actividad8.exe
+C:\Users\kevv_\Downloads\Actividad8\bin\Debug\net8.0\Actividad8.deps.json
+C:\Users\kevv_\Downloads\Actividad8\bin\Debug\net8.0\Actividad8.runtimeconfig.json
+C:\Users\kevv_\Downloads\Actividad8\bin\Debug\net8.0\Actividad8.dll
+C:\Users\kevv_\Downloads\Actividad8\bin\Debug\net8.0\Actividad8.pdb
+C:\Users\kevv_\Downloads\Actividad8\obj\Debug\net8.0\Actividad8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kevv_\Downloads\Actividad8\obj\Debug\net8.0\Actividad8.AssemblyInfoInputs.cache
+C:\Users\kevv_\Downloads\Actividad8\obj\Debug\net8.0\Actividad8.AssemblyInfo.cs
+C:\Users\kevv_\Downloads\Actividad8\obj\Debug\net8.0\Actividad8.csproj.CoreCompileInputs.cache
+C:\Users\kevv_\Downloads\Actividad8\obj\Debug\net8.0\Actividad8.dll
+C:\Users\kevv_\Downloads\Actividad8\obj\Debug\net8.0\refint\Actividad8.dll
+C:\Users\kevv_\Downloads\Actividad8\obj\Debug\net8.0\Actividad8.pdb
+C:\Users\kevv_\Downloads\Actividad8\obj\Debug\net8.0\Actividad8.genruntimeconfig.cache
+C:\Users\kevv_\Downloads\Actividad8\obj\Debug\net8.0\ref\Actividad8.dll
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\bin\Debug\net8.0\Actividad8.exe
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\bin\Debug\net8.0\Actividad8.deps.json
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\bin\Debug\net8.0\Actividad8.runtimeconfig.json
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\bin\Debug\net8.0\Actividad8.dll
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\bin\Debug\net8.0\Actividad8.pdb
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\obj\Debug\net8.0\Actividad8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\obj\Debug\net8.0\Actividad8.AssemblyInfoInputs.cache
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\obj\Debug\net8.0\Actividad8.AssemblyInfo.cs
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\obj\Debug\net8.0\Actividad8.csproj.CoreCompileInputs.cache
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\obj\Debug\net8.0\Actividad8.dll
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\obj\Debug\net8.0\refint\Actividad8.dll
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\obj\Debug\net8.0\Actividad8.pdb
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\obj\Debug\net8.0\Actividad8.genruntimeconfig.cache
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\obj\Debug\net8.0\ref\Actividad8.dll
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\Actividad8\bin\Debug\net8.0\Actividad8.exe
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\Actividad8\bin\Debug\net8.0\Actividad8.deps.json
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\Actividad8\bin\Debug\net8.0\Actividad8.runtimeconfig.json
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\Actividad8\bin\Debug\net8.0\Actividad8.dll
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\Actividad8\bin\Debug\net8.0\Actividad8.pdb
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\Actividad8\obj\Debug\net8.0\Actividad8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\Actividad8\obj\Debug\net8.0\Actividad8.AssemblyInfoInputs.cache
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\Actividad8\obj\Debug\net8.0\Actividad8.AssemblyInfo.cs
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\Actividad8\obj\Debug\net8.0\Actividad8.csproj.CoreCompileInputs.cache
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\Actividad8\obj\Debug\net8.0\Actividad8.dll
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\Actividad8\obj\Debug\net8.0\refint\Actividad8.dll
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\Actividad8\obj\Debug\net8.0\Actividad8.pdb
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\Actividad8\obj\Debug\net8.0\Actividad8.genruntimeconfig.cache
+C:\Users\kevv_\OneDrive\Documentos\KEVIN NO TOCAR\Tareas Programación\Actividad8\Actividad8\obj\Debug\net8.0\ref\Actividad8.dll
